@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Buscador de publicaciones utilizando una API pública y TypeScript"
+  >
+
+  <title>Buscador de Publicaciones</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="module" src="dist/app.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Buscador de publicaciones</h1>
+
+    <p>
+      Consulta publicaciones mediante la API pública JSONPlaceholder.
+    </p>
+  </header>
+
+  <main>
+
+    <section aria-labelledby="titulo-formulario">
+
+      <h2 id="titulo-formulario">
+        Realizar consulta
+      </h2>
+
+      <p>
+        Ingresa los datos para buscar publicaciones.
+      </p>
+
+      <form id="search-form">
+
+        <div>
+          <label for="user-id">
+            ID del usuario
+          </label>
+
+          <input
+            type="number"
+            id="user-id"
+            name="userId"
+            min="1"
+            max="10"
+            required
+            placeholder="Ejemplo: 1"
+            aria-describedby="user-help"
+          >
+
+          <small id="user-help">
+            Ingresa un número entre 1 y 10.
+          </small>
+        </div>
+
+        <div>
+          <label for="keyword">
+            Palabra en el título
+          </label>
+
+          <input
+            type="text"
+            id="keyword"
+            name="keyword"
+            minlength="2"
+            maxlength="40"
+            required
+            placeholder="Ejemplo: qui"
+            aria-describedby="keyword-help"
+          >
+
+          <small id="keyword-help">
+            Escribe entre 2 y 40 caracteres.
+          </small>
+        </div>
+
+        <button
+          type="submit"
+          id="submit-button"
+        >
+          Buscar publicaciones
+        </button>
+
+      </form>
+
+    </section>
+
+    <section aria-labelledby="titulo-resultados">
+
+      <h2 id="titulo-resultados">
+        Resultados
+      </h2>
+
+      <div
+        id="status"
+        role="status"
+        aria-live="polite"
+      >
+        Ingresa los datos para realizar una consulta.
+      </div>
+
+      <ul
+        id="results"
+        aria-label="Lista de publicaciones"
+      ></ul>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Proyecto académico — Formulario y consumo de una API pública
+    </p>
+  </footer>
+
+</body>
+</html>
