@@ -1,0 +1,1 @@
+console.log("Aplicación TypeScript inicializada correctamente.");
